@@ -1,0 +1,61 @@
+{
+  "name": "aainpe-gatsby",
+  "description": "http://amisinpe.net",
+  "version": "1.0.0",
+  "author": "Mehdi Achour <machour@gmail.com>",
+  "dependencies": {
+    "date-fns": "^1.29.0",
+    "fs-extra": "^5.0.0",
+    "gatsby": "^1.9.149",
+    "gatsby-link": "^1.6.32",
+    "gatsby-paginate": "^1.0.12",
+    "gatsby-plugin-manifest": "^1.0.15",
+    "gatsby-plugin-offline": "^1.0.15",
+    "gatsby-plugin-react-helmet": "^2.0.3",
+    "gatsby-plugin-sitemap": "^1.2.14",
+    "gatsby-plugin-styled-components": "^2.0.4",
+    "gatsby-plugin-typography": "^1.7.16",
+    "gatsby-source-wordpress": "^2.0.42",
+    "html-entities": "^1.2.1",
+    "prop-types": "^15.6.1",
+    "react": "^15.6.1",
+    "react-collapsible": "^2.0.4",
+    "react-dom": "^15.6.1",
+    "react-helmet": "^5.2.0",
+    "react-share": "^1.19.0",
+    "styled-components": "^2.4.0",
+    "typography": "^0.16.6",
+    "typography-theme-moraga": "^0.15.10"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "cli-glob": "^0.1.0",
+    "eslint": "^4.18.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "prettier": "^1.9.2",
+    "stylefmt": "^6.0.0",
+    "stylelint": "^8.4.0",
+    "stylelint-config-standard": "^18.0.0"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "develop": "gatsby develop",
+    "dev": "npm run develop",
+    "serve": "gatsby serve",
+    "build": "gatsby build",
+    "build:pp": "gatsby build --prefix-paths",
+    "clean": "rm -rf public",
+    "sync": "rsync --progress -az public idk1:/home/www-data/mehdi/aainpe.idk.tn/",
+    "deploy": "npm run build && npm run sync",
+    "lint:js": "eslint --ext .js src/",
+    "format:js": "prettier '**/*.{js,jsx}' --write"
+  }
+}
